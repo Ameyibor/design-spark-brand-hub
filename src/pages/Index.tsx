@@ -1,7 +1,9 @@
+
 import { useState } from 'react';
 import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import ThreeAnimation from '@/components/ThreeAnimation';
 
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -113,13 +115,18 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative px-6 py-20 overflow-hidden">
+        {/* 3D Animation Background */}
+        <div className="absolute inset-0 z-0">
+          <ThreeAnimation />
+        </div>
+        
         {/* Background Gradient Shapes */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-red-500 to-purple-600 rounded-full opacity-20 blur-3xl transform translate-x-32 -translate-y-32"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full opacity-15 blur-3xl transform -translate-x-32 translate-y-32"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto z-20">
           <div className="text-center space-y-6">
             <p className="text-sm text-gray-400 tracking-wider uppercase">
               custom graphic design • creative branding agency • startup design services
