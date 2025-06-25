@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ArrowRight, Palette, Package, Globe, PresentationChart, Star, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -24,7 +24,7 @@ const Index = () => {
       description: "Social media graphics and web visuals"
     },
     {
-      icon: PresentationChart,
+      icon: Presentation,
       title: "Presentation Design",
       description: "Corporate and pitch deck presentations"
     }
