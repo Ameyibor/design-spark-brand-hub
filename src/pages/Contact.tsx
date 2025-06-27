@@ -9,18 +9,18 @@ const Contact = () => {
       {/* Navigation */}
       <nav className="px-6 py-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">hexatech co logo design</div>
+          <div className="text-2xl font-bold">hexatech</div>
           <div className="hidden md:flex space-x-8">
             <a href="/" className="hover:text-red-400 transition-colors">Home</a>
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
             <a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a>
             <a href="/about" className="hover:text-red-400 transition-colors">About</a>
-            <a href="/blog" className="hover:text-red-400 transition-colors">Blog</a>
+            <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn</a>
             <a href="/pricing" className="hover:text-red-400 transition-colors">Pricing</a>
             <a href="/contact" className="text-red-400">Contact</a>
           </div>
           <Button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0">
-            Start Project
+            <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer">Book Appointment</a>
           </Button>
         </div>
       </nav>
@@ -29,10 +29,10 @@ const Contact = () => {
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Let's Create Something <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Brilliant</span>
+            Let's Create Something <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Amazing</span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Ready to transform your brand? We'd love to hear about your project and discuss how we can help.
+            Ready to bring your creative vision to life? We'd love to hear about your project and discuss how we can help.
           </p>
         </div>
       </section>
@@ -68,14 +68,14 @@ const Contact = () => {
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Project Type</label>
+                      <label className="block text-sm font-medium mb-2">Service Type</label>
                       <select className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-red-400 transition-colors">
-                        <option value="">Select project type</option>
-                        <option value="logo">Logo Design</option>
-                        <option value="branding">Full Branding</option>
-                        <option value="packaging">Packaging Design</option>
-                        <option value="digital">Digital Design</option>
-                        <option value="presentation">Presentation Design</option>
+                        <option value="">Select service type</option>
+                        <option value="photography">Photography</option>
+                        <option value="resin-art">Resin Art</option>
+                        <option value="digital-art">Digital Art</option>
+                        <option value="website">Website Design</option>
+                        <option value="jewelry">Jewelry Design</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                     <textarea 
                       rows={6}
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-400 transition-colors resize-none"
-                      placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
+                      placeholder="Tell us about your creative vision, goals, timeline, and any specific requirements..."
                     ></textarea>
                   </div>
                   
@@ -154,12 +154,12 @@ const Contact = () => {
                 </div>
                 
                 <div className="pt-6 border-t border-gray-700 mt-8">
-                  <h3 className="font-semibold mb-4">Follow Us</h3>
+                  <h3 className="font-semibold mb-4">Connect With Us</h3>
                   <div className="flex space-x-4">
+                    <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">LinkedIn</a>
                     <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Instagram</a>
-                    <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Dribbble</a>
-                    <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">LinkedIn</a>
-                    <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Behance</a>
+                    <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Portfolio</a>
+                    <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Gallery</a>
                   </div>
                 </div>
               </CardContent>
@@ -168,16 +168,16 @@ const Contact = () => {
             {/* Quick Call Booking */}
             <Card className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/20">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Prefer to Talk?</h2>
+                <h2 className="text-2xl font-bold mb-4">Schedule a Creative Consultation</h2>
                 <p className="text-gray-300 mb-6">
-                  Book a free 15-minute intro call to discuss your project and see if we're a good fit.
+                  Book a free consultation to discuss your creative project and explore possibilities together.
                 </p>
                 <Button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0">
-                  Book Intro Call
+                  <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer">Book on LinkedIn</a>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <p className="text-sm text-gray-400 mt-4">
-                  No sales pressure - just a friendly chat about your goals
+                  No pressure - just a friendly chat about your creative vision
                 </p>
               </CardContent>
             </Card>
@@ -189,15 +189,15 @@ const Contact = () => {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold mb-2">How quickly can you start?</h3>
-                    <p className="text-gray-300 text-sm">Most projects can begin within 1-2 weeks of contract signing.</p>
+                    <p className="text-gray-300 text-sm">Most creative projects can begin within 1-2 weeks of agreement.</p>
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">Do you work internationally?</h3>
                     <p className="text-gray-300 text-sm">Yes! We work with clients worldwide and are experienced with remote collaboration.</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">What files will I receive?</h3>
-                    <p className="text-gray-300 text-sm">All source files, multiple formats (PNG, JPG, SVG, PDF), and comprehensive brand guidelines.</p>
+                    <h3 className="font-semibold mb-2">What will I receive?</h3>
+                    <p className="text-gray-300 text-sm">High-quality deliverables in multiple formats, source files, and detailed documentation as needed.</p>
                   </div>
                 </div>
               </CardContent>

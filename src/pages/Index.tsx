@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight, Camera, Gem, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ThreeAnimation from '@/components/ThreeAnimation';
@@ -10,24 +9,29 @@ const Index = () => {
 
   const services = [
     {
-      icon: Palette,
-      title: "Brand Identity Design",
-      description: "Logos, brand guides, and visual identity systems"
+      icon: Camera,
+      title: "Photography",
+      description: "Professional photography for events, portraits, and products"
     },
     {
-      icon: Package,
-      title: "Packaging Design", 
-      description: "Product packaging that stands out on shelves"
+      icon: Palette,
+      title: "Resin Art", 
+      description: "Custom resin art pieces and decorative designs"
     },
     {
       icon: Globe,
-      title: "Digital Design",
-      description: "Social media graphics and web visuals"
+      title: "Digital Art",
+      description: "Digital illustrations and creative artwork"
     },
     {
-      icon: Presentation,
-      title: "Presentation Design",
-      description: "Corporate and pitch deck presentations"
+      icon: Monitor,
+      title: "Website Design",
+      description: "Custom website design and development"
+    },
+    {
+      icon: Gem,
+      title: "Jewelry Design",
+      description: "Unique jewelry pieces and custom designs"
     }
   ];
 
@@ -98,17 +102,17 @@ const Index = () => {
       {/* Navigation */}
       <nav className="relative z-50 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">hexatech co logo design</div>
+          <div className="text-2xl font-bold">hexatech</div>
           <div className="hidden md:flex space-x-8">
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
             <a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a>
             <a href="/about" className="hover:text-red-400 transition-colors">About</a>
-            <a href="/blog" className="hover:text-red-400 transition-colors">Blog</a>
+            <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn</a>
             <a href="/pricing" className="hover:text-red-400 transition-colors">Pricing</a>
             <a href="/contact" className="hover:text-red-400 transition-colors">Contact</a>
           </div>
           <Button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0">
-            <a href="/contact">Start Project</a>
+            <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer">Book Appointment</a>
           </Button>
         </div>
       </nav>
@@ -129,17 +133,17 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="text-center space-y-6">
             <p className="text-sm text-gray-400 tracking-wider uppercase">
-              custom graphic design • creative branding agency • startup design services
+              creative design • photography • digital art • jewelry • websites
             </p>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Design That Turns
+              Creative Design That
               <br />
               <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
-                Heads, and Converts
+                Brings Ideas to Life
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We help startups, brands, and creators bring their vision to life with bold, strategic graphic design.
+              We specialize in photography, digital art, resin art, jewelry design, and website creation to help bring your creative vision to reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4">
@@ -159,9 +163,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-gray-300 text-lg">Comprehensive design solutions for your brand</p>
+            <p className="text-gray-300 text-lg">Creative solutions across multiple artistic disciplines</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="bg-gray-700/50 border-gray-600 hover:bg-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <CardContent className="p-6 text-center">
@@ -291,18 +295,19 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="text-2xl font-bold mb-4">hexatech co logo design</div>
+              <div className="text-2xl font-bold mb-4">hexatech</div>
               <p className="text-gray-400">
-                Bold, strategic graphic design for startups and growing brands.
+                Creative design solutions across photography, digital art, resin art, jewelry, and websites.
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Brand Identity</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Packaging Design</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Digital Design</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Presentations</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Photography</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Resin Art</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Digital Art</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Website Design</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Jewelry Design</a></li>
               </ul>
             </div>
             <div>
@@ -310,7 +315,7 @@ const Index = () => {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a></li>
                 <li><a href="/about" className="hover:text-red-400 transition-colors">About</a></li>
-                <li><a href="/blog" className="hover:text-red-400 transition-colors">Blog</a></li>
+                <li><a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn</a></li>
                 <li><a href="/contact" className="hover:text-red-400 transition-colors">Contact</a></li>
               </ul>
             </div>
@@ -324,11 +329,11 @@ const Index = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
-            <p className="text-gray-400">© 2024 hexatech co logo design. All rights reserved.</p>
+            <p className="text-gray-400">© 2024 hexatech. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Twitter</a>
+              <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">LinkedIn</a>
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Instagram</a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">LinkedIn</a>
+              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Twitter</a>
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Dribbble</a>
             </div>
           </div>
