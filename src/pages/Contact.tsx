@@ -9,7 +9,7 @@ const Contact = () => {
       {/* Navigation */}
       <nav className="px-6 py-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">DesignCo</div>
+          <div className="text-2xl font-bold">hexatech co logo design</div>
           <div className="hidden md:flex space-x-8">
             <a href="/" className="hover:text-red-400 transition-colors">Home</a>
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
@@ -120,7 +120,7 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-red-400 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-gray-300">hello@designco.com</p>
+                      <p className="text-gray-300">delaameyibor@gmail.com</p>
                       <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
                     </div>
                   </div>
@@ -128,9 +128,18 @@ const Contact = () => {
                   <div className="flex items-start space-x-4">
                     <Phone className="h-6 w-6 text-red-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold mb-1">WhatsApp</h3>
-                      <p className="text-gray-300">+1 (555) 123-4567</p>
+                      <h3 className="font-semibold mb-1">Phone</h3>
+                      <p className="text-gray-300">0595388389</p>
                       <p className="text-sm text-gray-400">Quick questions and updates</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="h-6 w-6 text-red-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Location</h3>
+                      <p className="text-gray-300">9 okugamah lane</p>
+                      <p className="text-sm text-gray-400">Available for local meetings</p>
                     </div>
                   </div>
                   

@@ -98,7 +98,7 @@ const Index = () => {
       {/* Navigation */}
       <nav className="relative z-50 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">echnologies</div>
+          <div className="text-2xl font-bold">hexatech co logo design</div>
           <div className="hidden md:flex space-x-8">
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
             <a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a>
@@ -291,7 +291,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="text-2xl font-bold mb-4">echnologies</div>
+              <div className="text-2xl font-bold mb-4">hexatech co logo design</div>
               <p className="text-gray-400">
                 Bold, strategic graphic design for startups and growing brands.
               </p>
@@ -324,7 +324,7 @@ const Index = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
-            <p className="text-gray-400">© 2024 echnologies. All rights reserved.</p>
+            <p className="text-gray-400">© 2024 hexatech co logo design. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Twitter</a>
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Instagram</a>

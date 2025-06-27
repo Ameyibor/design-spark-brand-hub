@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ArrowRight, Target, Clock, Users, TrendingUp, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -38,22 +37,10 @@ const About = () => {
 
   const team = [
     {
-      name: "Sarah Chen",
-      role: "Creative Director",
-      bio: "10+ years crafting brand identities that resonate and convert",
+      name: "Dela Ameyibor",
+      role: "Creative Director & Founder",
+      bio: "Expert in crafting brand identities that resonate and convert, with a passion for helping businesses stand out",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face"
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Brand Strategist", 
-      bio: "Expert in translating business goals into compelling visual narratives",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
-    },
-    {
-      name: "Emma Foster",
-      role: "Design Lead",
-      bio: "Specializes in digital design and user-centered brand experiences",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face"
     }
   ];
 
@@ -62,7 +49,7 @@ const About = () => {
       {/* Navigation */}
       <nav className="px-6 py-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">DesignCo</div>
+          <div className="text-2xl font-bold">hexatech co logo design</div>
           <div className="hidden md:flex space-x-8">
             <a href="/" className="hover:text-red-400 transition-colors">Home</a>
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
@@ -129,25 +116,23 @@ const About = () => {
         </div>
       </section>
 
-      {/* Meet the Team */}
+      {/* Meet Dela Ameyibor */}
       <section className="px-6 py-20 bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Meet the Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="bg-gray-700/50 border-gray-600 hover:bg-gray-700 transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-red-400 font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-400">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <h2 className="text-4xl font-bold text-center mb-16">Dela Ameyibor</h2>
+          <div className="flex justify-center">
+            <Card className="bg-gray-700/50 border-gray-600 hover:bg-gray-700 transition-all duration-300 max-w-md">
+              <CardContent className="p-6 text-center">
+                <img 
+                  src={team[0].image} 
+                  alt={team[0].name}
+                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                />
+                <h3 className="text-2xl font-semibold mb-2">{team[0].name}</h3>
+                <p className="text-red-400 font-medium mb-4">{team[0].role}</p>
+                <p className="text-gray-400">{team[0].bio}</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
