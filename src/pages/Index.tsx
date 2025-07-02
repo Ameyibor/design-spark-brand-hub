@@ -209,7 +209,7 @@ const Index = () => {
                         id="amount"
                         type="number"
                         value={paymentAmount}
-                        onChange={(e) => setPaymentAmount(Number(e.target.value)}
+                        onChange={(e) => setPaymentAmount(Number(e.target.value))}
                         className="bg-gray-700 border-gray-600 text-white mt-1"
                       />
                     </div>
