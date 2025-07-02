@@ -100,15 +100,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* Navigation */}
-      <nav className="relative z-50 px-6 py-4">
+      <nav className="relative z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
-              alt="Hexatech Logo" 
-              className="h-10 w-10 object-contain"
-            />
-            <div className="text-2xl font-bold">hexatech</div>
+          <div className="flex items-center space-x-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 rounded-full blur-lg opacity-60 animate-pulse"></div>
+              <img 
+                src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
+                alt="Hexatech Logo" 
+                className="relative h-12 w-12 object-contain drop-shadow-2xl"
+              />
+            </div>
+            <div className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">hexatech</div>
           </div>
           <div className="hidden md:flex space-x-8">
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
@@ -125,39 +128,56 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-6 py-20 overflow-hidden">
-        {/* 3D Animation Background */}
+      <section className="relative px-6 py-20 overflow-hidden min-h-screen">
+        {/* Realistic Background Image */}
         <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&h=1080&fit=crop" 
+            alt="Professional Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-orange-900/20"></div>
+        </div>
+        
+        {/* 3D Animation Overlay */}
+        <div className="absolute inset-0 z-10 opacity-30">
           <ThreeAnimation />
         </div>
         
-        {/* Background Gradient Shapes */}
-        <div className="absolute inset-0 overflow-hidden z-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-red-500 to-purple-600 rounded-full opacity-20 blur-3xl transform translate-x-32 -translate-y-32"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full opacity-15 blur-3xl transform -translate-x-32 translate-y-32"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto z-20">
-          <div className="text-center space-y-6">
-            <p className="text-sm text-gray-400 tracking-wider uppercase">
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto z-20 flex items-center min-h-[80vh]">
+          <div className="text-center space-y-8 w-full">
+            <div className="flex justify-center mb-8">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 rounded-full blur-3xl opacity-40 animate-pulse scale-150"></div>
+                <div className="absolute inset-0 bg-white/10 rounded-full blur-2xl"></div>
+                <img 
+                  src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
+                  alt="Hexatech Logo" 
+                  className="relative h-24 w-24 object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
+            <p className="text-sm text-gray-300 tracking-wider uppercase">
               creative design • photography • digital art • jewelry • websites
             </p>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Creative Design That
               <br />
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
                 Brings Ideas to Life
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               We specialize in photography, digital art, resin art, jewelry design, and website creation to help bring your creative vision to reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4">
+              <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4 shadow-2xl">
                 <a href="/contact">Start Your Project</a>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800 text-lg px-8 py-4">
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4 backdrop-blur-sm">
                 <a href="/portfolio">View Portfolio</a>
               </Button>
             </div>
@@ -166,7 +186,7 @@ const Index = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="px-6 py-20 bg-gray-800/50">
+      <section className="px-6 py-20 bg-gradient-to-b from-gray-900/95 to-gray-800/95 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Services</h2>
@@ -303,11 +323,14 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
-                  alt="Hexatech Logo" 
-                  className="h-8 w-8 object-contain"
-                />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 rounded-full blur-md opacity-40"></div>
+                  <img 
+                    src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
+                    alt="Hexatech Logo" 
+                    className="relative h-8 w-8 object-contain"
+                  />
+                </div>
                 <div className="text-2xl font-bold">hexatech</div>
               </div>
               <p className="text-gray-400">
