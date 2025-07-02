@@ -1,11 +1,18 @@
-
 import { useState } from 'react';
-import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight, Camera, Gem, Monitor } from 'lucide-react';
+import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight, Camera, Gem, Monitor, CreditCard, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import QRCodeGenerator from '@/components/QRCodeGenerator';
+import SecurityLevel from '@/components/SecurityLevel';
+import FeedbackSystem from '@/components/FeedbackSystem';
 
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [securityLevel, setSecurityLevel] = useState<'low' | 'medium' | 'high'>('low');
+  const [contractId, setContractId] = useState('HEX-2024-001');
+  const [paymentAmount, setPaymentAmount] = useState(100);
 
   const services = [
     {
@@ -32,6 +39,11 @@ const Index = () => {
       icon: Gem,
       title: "Jewelry Design",
       description: "Unique jewelry pieces and custom designs"
+    },
+    {
+      icon: CreditCard,
+      title: "Finance Payment Solutions",
+      description: "Secure payment processing with QR code integration"
     }
   ];
 
@@ -124,7 +136,7 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Enhanced for Finance */}
       <section className="px-6 py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="flex justify-center mb-8">
@@ -135,21 +147,22 @@ const Index = () => {
             />
           </div>
           <p className="text-sm text-gray-400 tracking-wider uppercase">
-            creative design • photography • digital art • jewelry • websites
+            secure finance • QR payments • creative design • contract management
           </p>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Creative Design That
+            Secure Finance Solutions
             <br />
             <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Brings Ideas to Life
+              With QR Payment Integration
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We specialize in photography, digital art, resin art, jewelry design, and website creation to help bring your creative vision to reality.
+            Advanced payment processing with security-based contract management, QR code generation, and comprehensive feedback systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4">
-              <a href="/contact">Start Your Project</a>
+              <Shield className="mr-2 h-5 w-5" />
+              Start Secure Payment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4">
@@ -159,12 +172,84 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Finance Payment System */}
+      <section className="px-6 py-20 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Secure Finance Payment System</h2>
+            <p className="text-gray-300 text-lg">QR code payments with security-based contract management</p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Contract Configuration */}
+            <div className="space-y-6">
+              <Card className="bg-gray-800/50 border-gray-600">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <img 
+                      src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
+                      alt="Hexatech Logo" 
+                      className="h-6 w-6 object-contain"
+                    />
+                    <h3 className="text-xl font-semibold text-white">Contract Details</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="contractId" className="text-white">Contract ID</Label>
+                      <Input
+                        id="contractId"
+                        value={contractId}
+                        onChange={(e) => setContractId(e.target.value)}
+                        className="bg-gray-700 border-gray-600 text-white mt-1"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="amount" className="text-white">Payment Amount ($)</Label>
+                      <Input
+                        id="amount"
+                        type="number"
+                        value={paymentAmount}
+                        onChange={(e) => setPaymentAmount(Number(e.target.value)}
+                        className="bg-gray-700 border-gray-600 text-white mt-1"
+                      />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <SecurityLevel 
+                level={securityLevel}
+                contractType="Finance Payment Contract"
+                onChange={setSecurityLevel}
+              />
+            </div>
+
+            {/* QR Code Generator */}
+            <div>
+              <QRCodeGenerator 
+                securityLevel={securityLevel}
+                amount={paymentAmount}
+                contractId={contractId}
+              />
+            </div>
+
+            {/* Feedback System */}
+            <div>
+              <FeedbackSystem 
+                securityLevel={securityLevel}
+                contractId={contractId}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Preview */}
       <section className="px-6 py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-gray-300 text-lg">Creative solutions across multiple artistic disciplines</p>
+            <p className="text-gray-300 text-lg">Creative solutions and secure finance systems</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -278,9 +363,9 @@ const Index = () => {
           <Card className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/20">
             <CardContent className="p-12">
               <Download className="h-16 w-16 text-red-400 mx-auto mb-6" />
-              <h2 className="text-3xl font-bold mb-4">Get Our Free Branding Checklist</h2>
+              <h2 className="text-3xl font-bold mb-4">Get Our Free Security Checklist</h2>
               <p className="text-gray-300 text-lg mb-8">
-                Start strong with our pro-approved design essentials. Perfect for startups and growing businesses.
+                Secure your finance operations with our pro-approved security essentials. Perfect for contract management.
               </p>
               <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4">
                 Download Now
@@ -305,17 +390,17 @@ const Index = () => {
                 <div className="text-2xl font-bold">hexatech</div>
               </div>
               <p className="text-gray-400">
-                Creative design solutions across photography, digital art, resin art, jewelry, and websites.
+                Secure finance solutions with QR payment integration and creative design services.
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Photography</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Resin Art</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Digital Art</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Website Design</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Jewelry Design</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Finance Payments</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">QR Code Generation</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Security Management</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Contract Processing</a></li>
+                <li><a href="/services" className="hover:text-red-400 transition-colors">Creative Design</a></li>
               </ul>
             </div>
             <div>
@@ -332,12 +417,13 @@ const Index = () => {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-red-400 transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-red-400 transition-colors">Terms & Conditions</a></li>
+                <li><a href="#" className="hover:text-red-400 transition-colors">Security Policy</a></li>
                 <li><a href="#" className="hover:text-red-400 transition-colors">Sitemap</a></li>
               </ul>
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
-            <p className="text-gray-400">© 2024 hexatech. All rights reserved.</p>
+            <p className="text-gray-400">© 2024 hexatech. All rights reserved. Secure Finance Solutions.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">LinkedIn</a>
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">Instagram</a>
