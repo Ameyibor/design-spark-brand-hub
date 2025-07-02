@@ -102,7 +102,14 @@ const Index = () => {
       {/* Navigation */}
       <nav className="relative z-50 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">hexatech</div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
+              alt="Hexatech Logo" 
+              className="h-10 w-10 object-contain"
+            />
+            <div className="text-2xl font-bold">hexatech</div>
+          </div>
           <div className="hidden md:flex space-x-8">
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
             <a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a>
@@ -295,7 +302,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="text-2xl font-bold mb-4">hexatech</div>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
+                  alt="Hexatech Logo" 
+                  className="h-8 w-8 object-contain"
+                />
+                <div className="text-2xl font-bold">hexatech</div>
+              </div>
               <p className="text-gray-400">
                 Creative design solutions across photography, digital art, resin art, jewelry, and websites.
               </p>
