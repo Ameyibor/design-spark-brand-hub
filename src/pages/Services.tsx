@@ -1,3 +1,4 @@
+
 import { ArrowRight, Camera, Palette, Globe, Monitor, Gem } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -46,14 +47,7 @@ const Services = () => {
       {/* Navigation */}
       <nav className="px-6 py-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/69ea8358-5e8f-443e-9dc3-851b5a40b654.png" 
-              alt="Hexatech Logo" 
-              className="h-10 w-10 object-contain"
-            />
-            <div className="text-2xl font-bold">hexatech</div>
-          </div>
+          <div className="text-2xl font-bold">hexatech</div>
           <div className="hidden md:flex space-x-8">
             <a href="/" className="hover:text-red-400 transition-colors">Home</a>
             <a href="/services" className="text-red-400">Services</a>
