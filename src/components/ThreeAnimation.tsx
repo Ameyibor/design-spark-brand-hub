@@ -7,14 +7,6 @@ import * as THREE from 'three';
 const AnimatedShape = ({ position, shape = 'box' }: { position: [number, number, number], shape?: 'box' | 'sphere' | 'torus' }) => {
   const meshRef = useRef<THREE.Mesh>(null);
 
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.5;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
-      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime + position[0]) * 0.2;
-    }
-  });
-
   const gradientMaterial = new THREE.ShaderMaterial({
     uniforms: {
       time: { value: 0 },
@@ -41,6 +33,11 @@ const AnimatedShape = ({ position, shape = 'box' }: { position: [number, number,
   });
 
   useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x = state.clock.elapsedTime * 0.5;
+      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime + position[0]) * 0.2;
+    }
     gradientMaterial.uniforms.time.value = state.clock.elapsedTime;
   });
 

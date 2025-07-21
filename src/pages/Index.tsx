@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowRight, Palette, Package, Globe, Presentation, Star, Download, ChevronLeft, ChevronRight, Camera, Gem, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import ThreeAnimation from '@/components/ThreeAnimation';
 
 const Index = () => {
@@ -104,14 +105,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-bold">hexatech</div>
           <div className="hidden md:flex space-x-8">
-            <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
-            <a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a>
-            <a href="/about" className="hover:text-red-400 transition-colors">About</a>
+            <Link to="/services" className="hover:text-red-400 transition-colors">Services</Link>
+            <Link to="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</Link>
+            <Link to="/about" className="hover:text-red-400 transition-colors">About</Link>
             <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn</a>
-            <a href="/pricing" className="hover:text-red-400 transition-colors">Pricing</a>
-            <a href="/contact" className="hover:text-red-400 transition-colors">Contact</a>
+            <Link to="/pricing" className="hover:text-red-400 transition-colors">Pricing</Link>
+            <Link to="/contact" className="hover:text-red-400 transition-colors">Contact</Link>
           </div>
-          <Button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0">
+          <Button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0" asChild>
             <a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer">Book Appointment</a>
           </Button>
         </div>
@@ -146,12 +147,14 @@ const Index = () => {
               We specialize in photography, digital art, resin art, jewelry design, and website creation to help bring your creative vision to reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4">
-                <a href="/contact">Start Your Project</a>
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0 text-lg px-8 py-4" asChild>
+                <Link to="/contact">
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800 text-lg px-8 py-4">
-                <a href="/portfolio">View Portfolio</a>
+              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800 text-lg px-8 py-4" asChild>
+                <Link to="/portfolio">View Portfolio</Link>
               </Button>
             </div>
           </div>
@@ -179,9 +182,11 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button variant="outline" className="border-red-500 text-red-400 hover:bg-red-500 hover:text-white">
-              <a href="/services">Explore Services</a>
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button variant="outline" className="border-red-500 text-red-400 hover:bg-red-500 hover:text-white" asChild>
+              <Link to="/services">
+                Explore Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -217,9 +222,11 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button variant="outline" className="border-red-500 text-red-400 hover:bg-red-500 hover:text-white">
-              <a href="/portfolio">View Full Portfolio</a>
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button variant="outline" className="border-red-500 text-red-400 hover:bg-red-500 hover:text-white" asChild>
+              <Link to="/portfolio">
+                View Full Portfolio
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -303,20 +310,20 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Photography</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Resin Art</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Digital Art</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Website Design</a></li>
-                <li><a href="/services" className="hover:text-red-400 transition-colors">Jewelry Design</a></li>
+                <li><Link to="/services" className="hover:text-red-400 transition-colors">Photography</Link></li>
+                <li><Link to="/services" className="hover:text-red-400 transition-colors">Resin Art</Link></li>
+                <li><Link to="/services" className="hover:text-red-400 transition-colors">Digital Art</Link></li>
+                <li><Link to="/services" className="hover:text-red-400 transition-colors">Website Design</Link></li>
+                <li><Link to="/services" className="hover:text-red-400 transition-colors">Jewelry Design</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</a></li>
-                <li><a href="/about" className="hover:text-red-400 transition-colors">About</a></li>
+                <li><Link to="/portfolio" className="hover:text-red-400 transition-colors">Portfolio</Link></li>
+                <li><Link to="/about" className="hover:text-red-400 transition-colors">About</Link></li>
                 <li><a href="https://linkedin.com/in/delaameyibor" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn</a></li>
-                <li><a href="/contact" className="hover:text-red-400 transition-colors">Contact</a></li>
+                <li><Link to="/contact" className="hover:text-red-400 transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
