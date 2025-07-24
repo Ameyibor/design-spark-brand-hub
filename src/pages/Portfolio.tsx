@@ -1,14 +1,22 @@
 
 import { useState } from 'react';
-import { ArrowRight, Filter } from 'lucide-react';
+import { ArrowRight, Filter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
+// Import generated images
+import graphicDesign1 from '@/assets/graphic-design-1.jpg';
+import graphicDesign2 from '@/assets/graphic-design-2.jpg';
+import digitalArt1 from '@/assets/digital-art-1.jpg';
+import digitalArt2 from '@/assets/digital-art-2.jpg';
+import photography1 from '@/assets/photography-1.jpg';
+import photography2 from '@/assets/photography-2.jpg';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filters = ['All', 'Logos', 'Packaging', 'Digital', 'Presentations'];
-  const industries = ['All Industries', 'Beauty', 'Tech', 'Food', 'Events'];
+  const filters = ['All', 'Logos', 'Packaging', 'Digital', 'Presentations', 'Graphic Design', 'Digital Art', 'Photography'];
+  const industries = ['All Industries', 'Beauty', 'Tech', 'Food', 'Events', 'Art', 'Gaming', 'Business', 'Tourism'];
 
   const projects = [
     {
@@ -64,6 +72,60 @@ const Portfolio = () => {
       brief: "Event management software needed comprehensive digital assets for major product launch campaign.",
       solution: "Created multi-channel digital campaign including web banners, social assets, and email templates.",
       result: "Achieved 500% increase in demo requests and 25% conversion rate during launch quarter."
+    },
+    {
+      title: "Corporate Identity System",
+      category: "Graphic Design",
+      industry: "Tech",
+      image: graphicDesign1,
+      brief: "Global tech company needed unified visual identity system for international expansion.",
+      solution: "Developed comprehensive brand guidelines with modular logo system and cohesive design language.",
+      result: "Streamlined brand implementation across 12 countries and 85% brand recognition increase."
+    },
+    {
+      title: "Festival Poster Campaign",
+      category: "Graphic Design", 
+      industry: "Events",
+      image: graphicDesign2,
+      brief: "Music festival required eye-catching promotional materials to attract diverse audience demographics.",
+      solution: "Created dynamic poster series with bold typography and vibrant color schemes matching festival energy.",
+      result: "Sold out event in 2 weeks and 300% increase in social media shares."
+    },
+    {
+      title: "Surreal Landscape Series",
+      category: "Digital Art",
+      industry: "Art",
+      image: digitalArt1,
+      brief: "Gallery exhibition needed original digital artworks exploring themes of nature and technology.",
+      solution: "Created immersive digital paintings blending organic and synthetic elements with dramatic lighting.",
+      result: "Featured in 5 international galleries and acquired by private collectors worldwide."
+    },
+    {
+      title: "Cyberpunk Character Design",
+      category: "Digital Art",
+      industry: "Gaming",
+      image: digitalArt2,
+      brief: "Indie game studio needed character designs for futuristic action RPG set in dystopian city.",
+      solution: "Developed detailed character concepts with cyberpunk aesthetics and rich backstory elements.",
+      result: "Game trailer reached 2M views and secured publisher deal worth $500K."
+    },
+    {
+      title: "Executive Portrait Session",
+      category: "Photography",
+      industry: "Business",
+      image: photography1,
+      brief: "Fortune 500 company needed professional headshots for C-suite executives and annual report.",
+      solution: "Conducted on-location portrait sessions with professional lighting and corporate styling.",
+      result: "Used across all corporate communications and contributed to 95% stakeholder approval rating."
+    },
+    {
+      title: "Mountain Landscape Collection",
+      category: "Photography",
+      industry: "Tourism",
+      image: photography2,
+      brief: "Tourism board needed stunning landscape photography for national park promotion campaign.",
+      solution: "Captured dramatic mountain vistas during golden hour with expert composition and timing.",
+      result: "Campaign generated 40% increase in park visitors and won National Tourism Photography Award."
     }
   ];
 
@@ -77,7 +139,7 @@ const Portfolio = () => {
       <nav className="px-6 py-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-bold">DesignCo</div>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             <a href="/" className="hover:text-red-400 transition-colors">Home</a>
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
             <a href="/portfolio" className="text-red-400">Portfolio</a>
@@ -85,6 +147,15 @@ const Portfolio = () => {
             <a href="/blog" className="hover:text-red-400 transition-colors">Blog</a>
             <a href="/pricing" className="hover:text-red-400 transition-colors">Pricing</a>
             <a href="/contact" className="hover:text-red-400 transition-colors">Contact</a>
+            <a 
+              href="https://linkedin.com/in/yourprofile" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1 hover:text-red-400 transition-colors"
+            >
+              <Linkedin className="h-4 w-4" />
+              <span>LinkedIn</span>
+            </a>
           </div>
           <Button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 border-0">
             Start Project
