@@ -138,7 +138,7 @@ const Portfolio = () => {
       {/* Navigation */}
       <nav className="px-6 py-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold">DesignCo</div>
+          <div className="text-2xl font-bold">Hexatech</div>
           <div className="hidden md:flex space-x-8 items-center">
             <a href="/" className="hover:text-red-400 transition-colors">Home</a>
             <a href="/services" className="hover:text-red-400 transition-colors">Services</a>
