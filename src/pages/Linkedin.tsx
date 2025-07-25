@@ -121,4 +121,4 @@ const Linkedin = () => {
   );
 };
 
-export default Blog;
+export default Linkedin;
