@@ -3,7 +3,7 @@ import { ArrowRight, Search, Tag, Calendar, User, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
-const Linkedin = () => {
+const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Navigation */}
